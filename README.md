@@ -6,6 +6,9 @@
 
 1. exa
 2. trash-cli
+3. bat
+4. git-delta
+5. xcp
 
 ## 如何使用
 
@@ -23,6 +26,9 @@ source (script path)/start.sh
 2. ll => exa --long --header --git --icons -@
 3. tree => exa -T --icons
 4. rm => trash-put
+5. cat => bat
+6. diff => delta
+7. cp => xcp
 
 > 如要禁止替代，执行命令`disable_replace`
 

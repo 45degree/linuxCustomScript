@@ -17,6 +17,18 @@ function disable_replace() {
 	if [ -n "$(type tree | grep alias)" ]; then
 		unalias tree
 	fi
+
+    if [ -n "$(type cp | grep alias)" ]; then
+        unalias cp
+    fi
+
+    if [ -n "$(type diff | grep alias)" ]; then
+        unalias diff
+    fi
+
+    if [ -n "$(type cat | grep alias)" ]; then
+        unalias cat
+    fi
 }
 
 function enable_replace() {
@@ -25,4 +37,7 @@ function enable_replace() {
 	alias ls=exa\ --icons
 	alias ll=exa\ --long\ --header\ --git\ --icons\ -@
 	alias tree=exa\ -T\ --icons
+    alias cp=xcp
+    alias diff=delta
+    alias cat=bat
 }
